@@ -13,6 +13,8 @@ export default function Login() {
         console.log(response)
         if(response.status === 200){
             navigate("/")
+            localStorage.setItem("userRole",response.data.role)
+            localStorage.setItem("userId",response.data.userId)
         }
     }
     return (
